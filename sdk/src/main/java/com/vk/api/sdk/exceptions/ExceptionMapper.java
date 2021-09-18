@@ -33,7 +33,7 @@ public class ExceptionMapper {
             case 13:
                 return new ApiRuntimeException(error.getErrorMsg());
             case 14:
-                return new ApiCaptchaException(error.getErrorMsg());
+                return new ApiCaptchaException(error.getErrorMsg(), error.getCaptchaSid(), error.getCaptchaImg());
             case 15:
                 return new ApiAccessException(error.getErrorMsg());
             case 16:

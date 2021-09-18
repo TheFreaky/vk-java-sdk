@@ -38,6 +38,12 @@ public class Error implements Validable {
     @SerializedName("request_params")
     private List<RequestParam> requestParams;
 
+    @SerializedName("captcha_sid")
+    private String captchaSid;
+
+    @SerializedName("captcha_img")
+    private String captchaImg;
+
     public Integer getErrorCode() {
         return errorCode;
     }
@@ -81,6 +87,14 @@ public class Error implements Validable {
     public Error setRequestParams(List<RequestParam> requestParams) {
         this.requestParams = requestParams;
         return this;
+    }
+
+    public String getCaptchaImg() {
+        return this.captchaImg;
+    }
+
+    public String getCaptchaSid() {
+        return this.captchaSid;
     }
 
     @Override
